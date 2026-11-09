@@ -8,6 +8,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.example.navalprotocol.ui.screens.LeaderboardScreen
 import com.example.navalprotocol.ui.screens.LoginScreen
 import com.example.navalprotocol.ui.screens.ProfileScreen
 import com.example.navalprotocol.ui.screens.RegisterScreen
@@ -20,8 +21,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NavalTheme {
-                // PROVISIONAL: se ve el perfil hasta tener el NavGraph (Paso 9).
-                ProfileScreen(onBack = {}, onSettings = {})
+                NavalTheme {
+                    // PROVISIONAL: se ve el ranking hasta tener el NavGraph (Paso 9).
+                    LeaderboardScreen(onBack = {})
+                }
             }
         }
     }
