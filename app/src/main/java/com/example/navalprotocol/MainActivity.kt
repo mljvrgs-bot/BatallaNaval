@@ -10,6 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.example.navalprotocol.ui.screens.LeaderboardScreen
 import com.example.navalprotocol.ui.screens.LoginScreen
+import com.example.navalprotocol.ui.screens.NotificationsScreen
 import com.example.navalprotocol.ui.screens.ProfileScreen
 import com.example.navalprotocol.ui.screens.RegisterScreen
 import com.example.navalprotocol.ui.screens.SettingsScreen
@@ -23,8 +24,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             NavalTheme {
                 NavalTheme {
-                    // PROVISIONAL: se ven los ajustes hasta tener el NavGraph (Paso 9).
-                    SettingsScreen(onBack = {}, onSignOut = {})
+                    // PROVISIONAL: se ven las notificaciones hasta tener el NavGraph (Paso 9).
+                    NotificationsScreen(onBack = {})
 
                 }
             }
