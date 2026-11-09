@@ -1,4 +1,4 @@
-package com.navalprotocol.app.ui.components
+package com.example.navalprotocol.ui.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable

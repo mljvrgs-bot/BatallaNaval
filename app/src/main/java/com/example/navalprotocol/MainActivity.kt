@@ -9,6 +9,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.example.navalprotocol.ui.screens.LoginScreen
+import com.example.navalprotocol.ui.screens.ProfileScreen
 import com.example.navalprotocol.ui.screens.RegisterScreen
 import com.example.navalprotocol.ui.theme.NavalTheme
 
@@ -19,13 +20,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NavalTheme {
-                // PROVISIONAL: alterna login/registro hasta tener el NavGraph (Paso 9).
-                var showRegister by remember { mutableStateOf(false) }
-                if (showRegister) {
-                    RegisterScreen(onSuccess = {}, onGoLogin = { showRegister = false })
-                } else {
-                    LoginScreen(onSuccess = {}, onGoRegister = { showRegister = true })
-                }
+                // PROVISIONAL: se ve el perfil hasta tener el NavGraph (Paso 9).
+                ProfileScreen(onBack = {}, onSettings = {})
             }
         }
     }
